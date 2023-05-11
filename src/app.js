@@ -1,3 +1,41 @@
+// Function (animation) search
+const iconSearchBtn = document.querySelector('.icon-search-btn');
+const inputSearch = document.querySelector('.input-search')
+
+iconSearchBtn.addEventListener('click', searchCity)
+
+function searchCity() {
+    let inputSearchValue = inputSearch.value;
+    if (inputSearchValue == '') {
+        alert('Aucune recherche')
+    }else{
+        animation()
+    }
+}
+
+function animation() {
+    inputSearch.style.width = '0';
+    inputSearch.style.left = '50%';
+    inputSearch.value = '';
+    let searchBox = document.querySelector('.search-box');
+    searchBox.style.animation = "endsearch 2s ease-in-out forwards";
+    iconSearchBtn.style.display = "none"
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function search
 
 const searchBtn = document.querySelector('.searchButton');
@@ -5,12 +43,7 @@ const searchInput = document.querySelector('.searchInput');
 
 
 
-searchBtn.addEventListener('click', search);
 
-function search() {
-    let searchValue = searchInput.value
-    searchValue = " "
-}
 
 
 
