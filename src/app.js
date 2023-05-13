@@ -1,61 +1,36 @@
-// Function (animation) search
-const iconSearchBtn = document.querySelector('.icon-search-btn');
-const inputSearch = document.querySelector('.input-search')
+// Function search
+const url = "http://api.weatherapi.com/v1/current.json?key= 6c7a03f5f1274291aaf135608230505&q="
+const searchBtn = document.querySelector('.btn-search');
+const inputSearch =  document.querySelector('.input-search');
+let locationName = document.querySelector('.location');
+const degreDay = document.querySelector('.degre-day');
+const conditionText = document.querySelector('.condition-text')
+let weatherImg = document.querySelector('.weather-img')
 
-iconSearchBtn.addEventListener('click', searchCity)
 
-function searchCity() {
-    let inputSearchValue = inputSearch.value;
-    if (inputSearchValue == '') {
-        alert('Aucune recherche')
+searchBtn.addEventListener('click', search);
+function search() {
+    if (inputSearch.value == "") {
+        alert('Aucune ville selectione')
     }else{
-        animation()
-    }
-}
+        let inputSearchValue = inputSearch.value;
+        locationName.textContent = inputSearchValue;
 
-function animation() {
-    inputSearch.style.width = '0';
-    inputSearch.style.left = '50%';
-    inputSearch.value = '';
-    let searchBox = document.querySelector('.search-box');
-    searchBox.style.animation = "endsearch 2s ease-in-out forwards";
-    iconSearchBtn.style.display = "none"
+
+        fetch(url + inputSearchValue +"&aqi=no")
+        .then((resp) => resp.json())
+        .then(function(data) {
+            let respData = data.current;
+            console.log(respData);
+            degreDay.textContent = respData.temp_c
+            conditionText.textContent = respData.condition.text
+            weatherImg.src = respData.condition.icon
+        }
+        );
+      
+    }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function search
-
-const searchBtn = document.querySelector('.searchButton');
-const searchInput = document.querySelector('.searchInput');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -63,7 +38,7 @@ const searchInput = document.querySelector('.searchInput');
 // URL + KEY
 //'http://api.weatherapi.com/v1/current.json?key=6c7a03f5f1274291aaf135608230505&q=London&aqi=no'
 
-const locationInput = document.getElementById('location');
+
 
 
 
