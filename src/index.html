@@ -8,24 +8,83 @@
     <title>Weather application</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="search-box">
-
-        <h1>Weather application</h1>
-
-        <div class="div-search">
-            <input class="input-search" type="text" name="" id="">
-            <i class="fa-regular fa-magnifying-glass icon-search-btn"></i>
-        </div>
-        
+    <div class="location-time">
+        <p class="location">bruxelles</p>
+        <p class="time">12:32</p>
     </div>
 
+    <nav>
+
+        <div class="burger-icon">
+            <span class="span-burger"></span>
+            <span class="span-burger"></span>
+            <span class="span-burger"></span>
+        </div>
+
+
+        <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+        </div>
+
+    </nav>
+
+    <section>
+        <div class="weather-icon-real-time">
+            <img class="weather-img" src="./assets/weather-img/day/113.png" alt="">
+        </div>
+        <div class="temperature">
+            <p>21°</p>
+            <p>Ciel dégagé</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="block-img">
+            <img src="./assets/weather-img/day/113.png" alt="">
+            <p>13:00</p>
+            </img>
+        </div>
+
+        <div class="block-img">
+            <img src="./assets/weather-img/day/113.png" alt="">
+            <p>14:00</p>
+            </img>
+        </div>
+
+        <div class="block-img">
+            <img src="./assets/weather-img/day/113.png" alt="">
+            <p>15:00</p>
+            </img>
+        </div>
+
+        <div class="block-img">
+            <img src="./assets/weather-img/day/113.png" alt="">
+            <p>16:00</p>
+            </img>
+        </div>
+
+        <div class="block-img">
+            <img src="./assets/weather-img/night/116.png" alt="">
+            <p>17:00</p>
+            </img>
+        </div>
+
+        <div class="block-img">
+            <img src="./assets/weather-img/night/119.png" alt="">
+            <p>18:00</p>
+            </img>
+        </div>
+
+    </footer>
 
     <script src="./app.js"></script>
 
