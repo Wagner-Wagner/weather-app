@@ -130,6 +130,7 @@ section{
 section .weather-icon-real-time .weather-img{
     width: 20em;
     height: 20em;
+    border: none;
 }
 
 section .temperature{
